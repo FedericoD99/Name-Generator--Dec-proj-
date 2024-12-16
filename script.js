@@ -1,79 +1,87 @@
 //Generate Prefix
-function genPrefix (firstName){
-    if(firstName.length > 5){
-        return 'The Great'
+function genPrefix (firstName) {
+    if (firstName.length > 5) {
+      return 'The Great'
     } else {
-        return 'Master'
+      return 'Master'
     }
-}
-//Generate first name
-function genFirstName(firstName){
-    const firstLetter = firstName.charAT(0).toLowerCase()
-    if (firstLetter === 'a'){
-        return 'Jeff'
-    } else if (firstLetter ==='b'){
-        return 'Pablo'
-    } else{
-          return 'Julian'
-    }
-}
-//Generate middle name
-function genMiddleName (roadType, favoriteColor){
-    if(roadType === 'road'){
-        return `${favoriteColor }ridge` // Ex: Blueridge
-    }else if(roadType === 'street') {
-        return
-    }else {
-        return `${favoriteColor }ridge`
-    }
-}
-
-//generate last name
-function genLastName (lastName){
-const lastLetter = lastName.charAT(lastName.length-1)
-if (lastLetter === 'a') {
-    return 'Shadow'
-} else if (lastLetter === 'e'){
-    return 'Storm'
-}else if (lastLetter === 'i'){
-    return 'Storm'
-} else if (lastLetter === 'o'){
-    return 'Storm'
- }
   }
-//generate suffix
-function genSuffix(favoriteAnimal){
-    return `of ${favoriteAnimal} clam.`
-}
-
-//Master name building function
-function genFullName(){
-    //get user's inputs from the html elements
-const firstName = document.getElementById('firstName').value.trim()
-const lastName = document.getElementById('lastName').value.trim()
-const roadType = document.getElementById('roadType').value.trim()
-const favoriteColor = document.getElementById('favoriteColor').value.trim()
-const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
-    //run name generating functions and store them in new variables
-const prefix =genPrefix(firstName)
-const newFirstName =genPrefix(firstName)
-const middleName =genPrefix(roadType, favoriteColor)
-const newLastName =genPrefix(lastName)
-const suffix =genPrefix(favoriteAnimal)
-
-
-    //Capitalized name variables when needed 
-const capitalizedPrefix = capitalized(prefix)
-const capitalizedFirstName = capitalized(newFirstName)
-const capitalizedMiddleName = capitalized(middleName)
-const capitalizedLastName = capitalized(newLastName)
-
-    //Combine all of the name variables into a full new name
-
+  //generate first name
+  function genFirstName (firstName) {
+    const firstLetter = firstName.charAt(0).toLowerCase()
+    if (firstLetter === 'a') {
+      return 'Jeff'
+    } else if (firstLetter === 'b') {
+      return 'Pablo'
+    } else {
+      return 'Julian'
+    }
+  }
+  
+  //generate middle name
+  function genMiddleName (roadType, favoriteColor) {
+    if (roadType === 'road') {
+      return `${favoriteColor}ridge` //EX:  blueridge
+    } else if (roadType === 'street') {
+      return `${favoriteColor}son` //EX: blueson
+    } else {
+      return `${favoriteColor}stone` //EX: bluestone
+    }
+  }
+  
+  //generate Last Name
+  function genLastName (lastName) {
+    const lastLetter = lastName.charAt(lastName.length - 1)
+    if (lastLetter === 'a') {
+      return 'Shadow'
+    } else if (lastLetter === 'e') {
+      return 'Storm'
+    } else if (lastLetter === 'i') {
+      return 'Blaze'
+    } else if (lastLetter === 'o') {
+      return 'Thorn'
+    } else if (lastLetter === 'u') {
+      return 'Frost'
+    } else {
+      return 'Moon' // Default last name for letters not matched
+    }
+  }
+  
+  //generate Suffix
+  function genSuffix (favoriteAnimal) {
+    return `of ${favoriteAnimal} clan.`
+  }
+  
+  //MAster Name Building FUnction
+  function genFullName () {
+    //Get the Users Inputs from HTML Elements
+    const firstName = document.getElementById('firstName').value.trim()
+    const lastName = document.getElementById('lastName').value.trim()
+    const roadType = document.getElementById('roadType').value
+    const favoriteColor = document.getElementById('favoriteColor').value.trim()
+    const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
+  
+    //Run Name Generating Functions & store them in new variables
+    const prefix = genPrefix(firstName)
+    const newFirstName = genFirstName(firstName)
+    const middleName = genMiddleName(roadType, favoriteColor)
+    const newLastName = genLastName(lastName)
+    const suffix = genSuffix(favoriteAnimal)
+  
+    //Capitalize Name Variables when needed
+    const capitalizedPrefix = capitalize(prefix)
+    const capitalizedFirstName = capitalize(newFirstName)
+    const capitalizedMiddleName = capitalize(middleName)
+    const capitalizedLastName = capitalize(newLastName)
+  
+    //Combine all of the Name variables in a new name
+    const fullName = `${capitalizedPrefix} ${capitalizedFirstName} ${capitalizedMiddleName} ${capitalizedLastName} ${suffix}`
+    console.log(fullName)
     //Display the new name
-}
-
-// Capitalization function
-function capitalized(input){
-    return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase() 
-}
+    document.getElementById('result').textContent = fullName
+  }
+  
+  //Capitalization Function
+  function capitalize (input) {
+    return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase()
+  }
