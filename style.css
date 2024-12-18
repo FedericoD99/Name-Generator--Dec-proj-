@@ -27,6 +27,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23FFFFFF" stroke-width="2" stroke-linejoin="round" d="M15 3H8L4 14h6l-3 8 13-12h-7.5L15 3z"></path></svg>') 24 24, auto;
   
   }
 
@@ -54,5 +55,6 @@
     margin-right: 100px;
 
   }
+
 
   
