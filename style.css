@@ -22,4 +22,37 @@
 }
   body{
     background-color: #185a9d;
+    margin-top: 50px;
+    background-image: url('534-custom-1080p-fantasy-wallpapers-v0-f8po17rn6acc1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  
   }
+
+  h1 {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+
+  p {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  label {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .res {
+    background-color: whitesmoke;
+    margin-left: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:xx-large;
+    margin-right: 100px;
+
+  }
+
+  

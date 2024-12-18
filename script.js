@@ -1,9 +1,9 @@
 //Generate Prefix
 function genPrefix (firstName) {
     if (firstName.length > 5) {
-      return 'The Great'
+      return 'The Goat'
     } else {
-      return 'Master'
+      return 'Leader'
     }
   }
   //generate first name
@@ -39,42 +39,37 @@ function genPrefix (firstName) {
     } else if (lastLetter === 'i') {
       return 'Blaze'
     } else if (lastLetter === 'o') {
-      return 'Thorn'
+      return 'Mist'
     } else if (lastLetter === 'u') {
-      return 'Frost'
+      return 'Ice'
     } else {
-      return 'Moon' // Default last name for letters not matched
+      return 'Shade' // Default last name for letters not matched
     }
   }
 
   
   
   //generate Suffix
-  function genSuffix (favoriteAnimal) {
-    switch (favoriteAnimal) {
-      case bear:
-        day = "Sunday";
-        break;
-      case 1:
-        day = "Monday";
-        break;
-      case 2:
-         day = "Tuesday";
-        break;
-      case 3:
-        day = "Wednesday";
-        break;
-      case 4:
-        day = "Thursday";
-        break;
-      case 5:
-        day = "Friday";
-        break;
-      case 6:
-        day = "Saturday";
-    }  }
+  function genSuffix(favoriteAnimal) {
+    switch(favoriteAnimal) {
+      case 'dog':
+        return "black clan";  // Removed the unnecessary break here
+      case 'cat':
+        return "white clan";
+      case 'Fox':
+        return "Yellow clan";
+      case 'snow lion':
+        return "White clan";
+      case 'Salvatore':
+        return "Indian clan";
+      case 'federico':
+        return "Italian clan";
+      default:
+        return "greek clan";  
+    }
+  }
   
-  //MAster Name Building FUnction
+  //MAster Name Building Function
   function genFullName () {
     //Get the Users Inputs from HTML Elements
     const firstName = document.getElementById('firstName').value.trim()
